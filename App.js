@@ -5,6 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Accueil from './components/Accueil';
 import Compte from './components/Compte';
 import Reparer from './components/Reparer';
+import Header from './components/Header';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,6 +14,10 @@ export default function App(){
         <NavigationContainer>
             <Tab.Navigator 
                 screenOptions={({route}) => ({
+                    headerTitle: () => <Header />, 
+                        headerStyle: {
+                          height: 500,
+                    },
                     tabBarIcon:({focused, color, size}) =>{
                         let iconName;
 
