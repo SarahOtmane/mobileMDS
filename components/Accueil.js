@@ -9,9 +9,9 @@ import Header from './sections/Header';
 const Accueil = () => {
     return (
         <View style={accueilStyle.container}>
-            <View style={accueilStyle.reparation}>
+            <View style={[accueilStyle.reparation, accueilStyle.m_B20]}>
                 <Header />
-                
+
                 <Text style={[accueilStyle.h1, accueilStyle.m_B20]}>
                     Faites des affaires avec vos affaires
                 </Text>
@@ -20,6 +20,15 @@ const Accueil = () => {
                 </Text>
 
                 <Etape />
+            </View>
+
+            <View style={[accueilStyle.tuto]} >
+                <Text style={[accueilStyle.h6, accueilStyle.m_B20]}>
+                    Comment réparer avec RenoWear ?
+                </Text>
+                <Text style={[accueilStyle.h6]}>
+                    Pas besoin de nous suivre à l'autre bout du monde. Il vous suffit de suivre ce tuto . 
+                </Text>
             </View>
         </View>
     );
