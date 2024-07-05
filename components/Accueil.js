@@ -1,15 +1,16 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import Svg, { G, Path, Defs, ClipPath, Rect } from 'react-native-svg';
 
 import accueilStyle from '../styles/accueilStyle';
 import Etape from './sections/Etape';
 import Header from './sections/Header';
 import Video from './sections/Video';
+import Button from './sections/Button';
 
 const Accueil = () => {
     return (
-        <View style={accueilStyle.container}>
+        <ScrollView>
             <View style={[accueilStyle.reparation, accueilStyle.m_B20]}>
                 <Header />
 
@@ -31,8 +32,9 @@ const Accueil = () => {
                     Pas besoin de nous suivre à l'autre bout du monde. Il vous suffit de suivre ce tuto . 
                 </Text>
 
+                <Button text="Obtenir un devis" arrow='true' />
             </View>
-        </View>
+        </ScrollView>
     );
 }
 
