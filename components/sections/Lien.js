@@ -27,8 +27,9 @@ const styles = StyleSheet.create({
         paddingVertical: 15,
         paddingHorizontal: 10,
         borderRadius: 10,
-        borderColor: '#000',
-        marginBottom: 10
+        borderColor: '#FFDBE8',
+        marginBottom: 10,
+        borderWidth: 1.5,
     },
     sous_container: {
         display: 'flex',
