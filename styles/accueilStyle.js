@@ -10,14 +10,15 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#FFDBE8',
         paddingVertical: 40,
+        paddingRight: 20,
         paddingTop: 100,
-        paddingHorizontal: 30
     },
     reparation:{
         backgroundColor: '#FFDBE8',
         paddingLeft : 25,
+        borderBottomRightRadius : 30,
+        borderBottomLeftRadius : 30,
     },
     etape:{
         display: 'flex',
