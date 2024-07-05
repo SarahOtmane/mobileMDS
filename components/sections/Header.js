@@ -2,11 +2,11 @@ import React from 'react';
 import { View, Image } from 'react-native';
 import Svg, { G, Path, Defs, ClipPath, Rect } from 'react-native-svg';
 
-import accueilStyle from '../../styles/accueilStyle';
+import Style from '../../Style';
 
 export default Header = () =>{
     return(
-        <View style={accueilStyle.header}>
+        <View style={Style.header}>
             <Image source={require('../../assets/logo.png')} />
             <Svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <G clipPath="url(#clip0_227_25742)">
