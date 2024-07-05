@@ -1,20 +1,10 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import SvgUri from 'react-native-svg-uri';
+import { View, StyleSheet, Image } from 'react-native';
 
 const Header = () => {
   return (
     <View style={styles.headerContainer}>
-      <SvgUri
-        width="150"
-        height="50"
-        source={require('../assets/logo.svg')}
-      />
-      <SvgUri
-        width="50"
-        height="50"
-        source={require('../assets/panier.svg')}
-      />
+      <Image source={require('../assets/logo.png')} />
     </View>
   );
 }
