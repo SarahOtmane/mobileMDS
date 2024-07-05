@@ -14,6 +14,9 @@ export default StyleSheet.create({
         paddingRight: 20,
         paddingTop: 100,
     },
+
+
+
     reparation:{
         backgroundColor: '#FFDBE8',
         paddingLeft : 25,
@@ -29,6 +32,16 @@ export default StyleSheet.create({
         marginLeft: 20,
         marginBottom: 30,
     },
+
+
+    tuto:{
+        paddingHorizontal : 25,
+    },
+    tutoText:{
+        marginVertical : 10,
+    },
+
+
     m_B20:{
         marginBottom: 20
     },
@@ -44,6 +57,9 @@ export default StyleSheet.create({
     },
     h3:{
         fontSize: 16,
+    },
+    h6:{
+        fontSize: 14,
     },
     p:{
         fontSize: 12,
