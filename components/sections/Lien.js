@@ -5,7 +5,7 @@ import { Path, Svg, SvgXml } from 'react-native-svg';
 export default Lien = ({ svg, text }) => {
     return (
         <TouchableOpacity style={styles.container}>
-            <View style={[styles.container, styles.sous_container]}>
+            <View style={[styles.sous_container]}>
                 <SvgXml xml={svg} width="16" height="17" />
                 <Text style={styles.text} >{text}</Text>
             </View>
@@ -28,11 +28,14 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         borderRadius: 10,
         borderColor: '#000',
+        marginBottom: 10
     },
     sous_container: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
+        paddingVertical: 15,
+        paddingHorizontal: 10,
     },
     text: {
         marginLeft: 20
