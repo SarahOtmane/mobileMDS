@@ -15,6 +15,12 @@ export default StyleSheet.create({
         paddingTop: 100,
     },
 
+    m_R10:{
+        marginRight: 10
+    },
+    m_T20:{
+        marginTop: 20
+    },
     m_B20:{
         marginBottom: 20
     },
