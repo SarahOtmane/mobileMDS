@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import Svg, { G, Path, Defs, ClipPath, Rect } from 'react-native-svg';
 
 import accueilStyle from '../../styles/accueilStyle';
+import Style from '../../Style';
 
 export default Etape = () => {
     return (
@@ -26,10 +27,10 @@ export default Etape = () => {
                 </Svg>
 
                 <View style={accueilStyle.etapeText}>
-                    <Text style={[accueilStyle.h2, accueilStyle.m_B10]}>
+                    <Text style={[Style.h2, Style.m_B10]}>
                         1 . Obtenez un devis
                     </Text>
-                    <Text style={[accueilStyle.p, accueilStyle.m_B20]}>
+                    <Text style={[Style.p, Style.m_B20]}>
                         Faites votre devis en ligne pour réparer vos vêtements/accessoires sous 2 minutes environ
                     </Text>
                 </View>
@@ -42,10 +43,10 @@ export default Etape = () => {
                 </Svg>
 
                 <View style={accueilStyle.etapeText}>
-                    <Text style={[accueilStyle.h2, accueilStyle.m_B10]}>
+                    <Text style={[Style.h2, Style.m_B10]}>
                         2 . Déposez vos articles
                     </Text>
-                    <Text style={[accueilStyle.p, accueilStyle.m_B20]}>
+                    <Text style={[Style.p, Style.m_B20]}>
                         Déposez vos vêtements/accessoires dans notre point de collecte le plus proche
                     </Text>
                 </View>
