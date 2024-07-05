@@ -5,6 +5,7 @@ import Svg, { G, Path, Defs, ClipPath, Rect } from 'react-native-svg';
 import accueilStyle from '../styles/accueilStyle';
 import Etape from './sections/Etape';
 import Header from './sections/Header';
+import Video from './sections/Video';
 
 const Accueil = () => {
     return (
@@ -29,6 +30,7 @@ const Accueil = () => {
                 <Text style={[accueilStyle.h6]}>
                     Pas besoin de nous suivre à l'autre bout du monde. Il vous suffit de suivre ce tuto . 
                 </Text>
+
             </View>
         </View>
     );
