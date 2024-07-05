@@ -2,9 +2,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import Home from './components/Home.js';
-import About from './components/About.js';
-import Third from './components/Third.js';
+import Accueil from './components/Accueil';
+import Compte from './components/Compte';
+import Reparer from './components/Reparer';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,43 +16,30 @@ export default function App(){
                     tabBarIcon:({focused, color, size}) =>{
                         let iconName;
 
-                        if(route.name === 'Home'){
-                            iconName = focused ? 'home' : 'home-outline';
-                        }else if(route.name === 'About'){
-                            iconName = focused ? 'information-circle' : 'information-circle-outline';
-                        }else if(route.name === 'Third'){
-                            iconName = focused ? 'search' : 'search-outline';
+                        if(route.name === 'Accueil'){
+                            iconName = focused ? 'home-outline' : 'home-outline';
+                        }else if(route.name === 'Reparer'){
+                            iconName = focused ? 'repeat' : 'repeat-outline';
+                        }else if(route.name === 'Compte'){
+                            iconName = focused ? 'person-outline' : 'person-outline';
                         }
                             return <Ionicons name={iconName} size={size} color={color} />
                         },
-                        tabBarActiveTintColor : '#ba0d7b',
-                        tabBarInactiveTintColor: '#333333'
+                        tabBarActiveTintColor : '#000000',
+                        tabBarInactiveTintColor: '#999999'
                 })}
             >
                 <Tab.Screen 
-                    name="Home" 
-                    component={Home} 
-                    options={{
-                        title:"Home", 
-                        headerStyle: {
-                            backgroundColor: '#6d75b5'
-                        }
-                    }} 
+                    name="Accueil" 
+                    component={Accueil}
                 /> 
                 <Tab.Screen 
-                    name="About" 
-                    component={About}  
-                    initialParams={{message: "Allons-y"}}
-                    options={{
-                        title:"About", 
-                        headerStyle: {
-                            backgroundColor: '#8c6db5'
-                        }
-                    }} 
+                    name="Reparer" 
+                    component={Reparer}
                 />
                 <Tab.Screen 
-                    name="Third" 
-                    component={Third}
+                    name="Compte" 
+                    component={Compte}
                 />
             </Tab.Navigator>
         </NavigationContainer>
