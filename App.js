@@ -32,14 +32,17 @@ export default function App(){
                 <Tab.Screen 
                     name="Accueil" 
                     component={Accueil}
+                    options={{ headerShown: false }}
                 /> 
                 <Tab.Screen 
                     name="Reparer" 
                     component={Reparer}
+                    options={{ headerShown: false }}
                 />
                 <Tab.Screen 
                     name="Compte" 
                     component={Compte}
+                    options={{ headerShown: false }}
                 />
             </Tab.Navigator>
         </NavigationContainer>
