@@ -1,10 +1,11 @@
-
+import React from 'react';
+import { Text, Image, ScrollView } from 'react-native';
 
 
 export default Connexion = ({navigation}) =>{
     return(
-        <View>
+        <ScrollView>
             <Text>Connexion</Text>
-        </View>
+        </ScrollView>
     )
 }
