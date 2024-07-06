@@ -2,8 +2,9 @@ import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 
-const Button = ({ text, arrow, bottom }) => {
+const Button = ({ text, arrow, bottom, onPress }) => {
     const handleSubmit = () => {
+        onPress();
     };
 
     return (
