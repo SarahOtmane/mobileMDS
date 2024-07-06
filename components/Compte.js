@@ -14,7 +14,7 @@ const Compte = () => {
             <Image style={compteStyle.image} source={require('../assets/compte.png')} />
             <Text style={[Style.h6, Style.m_R10, Style.m_T20]}>Identifiez vous pour suivre vos commandes, valider votre commande.</Text>
 
-            <Button text='Se connecter' arrow={false} />
+            <Button text='Se connecter' arrow={false} bottom={false} />
             <Lien
                 svg='<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.8178 1C6.4922 1.26633 6.27573 1.64294 6.20946 2.05833C6.18219 2.18648 6.12509 2.30639 6.0428 2.40833C5.96401 2.51425 5.86119 2.59994 5.7428 2.65833L5.08446 2.975C4.55617 3.23352 4.08781 3.59969 3.70946 4.05C2.5428 5.44167 2.5428 6.06667 2.5428 8.44167C2.5428 9.51667 1.40113 10.4917 1.10113 11.4583C0.917797 12.0333 0.817797 13.3333 2.33446 13.3333H13.6511C13.8729 13.344 14.0937 13.2982 14.2928 13.2C14.4915 13.101 14.6631 12.9552 14.7928 12.775C14.9161 12.5933 14.9928 12.3842 15.0178 12.1667C15.037 11.9443 14.9997 11.7208 14.9095 11.5167C14.6095 10.6083 13.4178 9.525 13.4178 8.45V6.675" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

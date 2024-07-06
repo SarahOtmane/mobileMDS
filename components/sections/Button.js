@@ -13,7 +13,7 @@ export default Button = ({text, arrow}) =>{
             onPress={handleSubmit}
         >
             <Text style={styles.buttonText}>{text}</Text>
-            {arrow==='true' && <Svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {arrow && <Svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <Path fillRule="evenodd" clipRule="evenodd" d="M18.2896 11.9958C18.5701 12.2743 18.5701 12.7257 18.2896 13.0042L12.7541 18.5L11.7384 17.4916L16.766 12.5L11.7384 7.50845L12.7541 6.5L18.2896 11.9958Z" fill="#999999"/>
                 <Path fillRule="evenodd" clipRule="evenodd" d="M17.9972 13.2131H5.5V11.7869H17.9972V13.2131Z" fill="#999999"/>
             </Svg>}

@@ -33,7 +33,7 @@ const Accueil = () => {
                     Pas besoin de nous suivre à l'autre bout du monde. Il vous suffit de suivre ce tuto . 
                 </Text>
 
-                <Button text="Obtenir un devis" arrow='true' />
+                <Button text="Obtenir un devis" arrow={true} bottom={false} />
             </View>
         </ScrollView>
     );
