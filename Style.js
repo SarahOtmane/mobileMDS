@@ -43,4 +43,7 @@ export default StyleSheet.create({
     p:{
         fontSize: 12,
     },
+    textBold:{
+        fontWeight: 'bold',
+    }
 })
