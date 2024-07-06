@@ -1,7 +1,7 @@
 
 
 
-export default Connexion = () =>{
+export default Connexion = ({navigation}) =>{
     return(
         <View>
             <Text>Connexion</Text>
