@@ -5,11 +5,20 @@ import Button from './Button';
 const RepaForm = ({ command, setCommand }) => {
     const [form, setForm] = useState({
         address: false,
-        artisan: false
+        artisan: false,
+        errors: false
     });
 
     const suiteForm = () => {
-        if (!form.address &&  !form.artisan) setForm((prevForm) => ({ ...prevForm, address: true }));
+        if (!form.address &&  !form.artisan){
+            if(command.specialité){
+                setForm((prevForm) => ({ ...prevForm, address: true }));
+                setForm((prevForm) => ({ ...prevForm, errors : false }));
+            }else{
+                setForm((prevForm) => ({ ...prevForm, errors : true }));
+            }
+        } 
+
     };
 
     const precedForm = () => {
@@ -25,6 +34,7 @@ const RepaForm = ({ command, setCommand }) => {
                     command={command} 
                     setCommand={setCommand} 
                     recherche={true} 
+                    error={form.errors}
                 />
             )}
 
@@ -35,6 +45,7 @@ const RepaForm = ({ command, setCommand }) => {
                     command={command} 
                     setCommand={setCommand} 
                     recherche={true} 
+                    error={form.errors}
                 />
             )}
             
