@@ -4,16 +4,21 @@ import Button from './Button';
 
 const RepaForm = ({ command, setCommand }) => {
     const [form, setForm] = useState({
-        address: false
+        address: false,
+        artisan: false
     });
 
     const suiteForm = () => {
-        if (!form.address ) setForm((prevForm) => ({ ...prevForm, address: true }));
+        if (!form.address &&  !form.artisan) setForm((prevForm) => ({ ...prevForm, address: true }));
     };
+
+    const precedForm = () => {
+        if(form.address && !form.artisan) setForm((prevForm) => ({ ...prevForm, address: false, artisan : false }));
+    }
 
     return (
         <>
-            {!form.address && (
+            {!form.address && !form.artisan && (
                 <Input 
                     label='Specialité' 
                     placeholder='Specialité'
@@ -23,7 +28,7 @@ const RepaForm = ({ command, setCommand }) => {
                 />
             )}
 
-            {form.address && (
+            {form.address && !form.artisan && (
                 <Input 
                     label='Où? Adresse, Ville, ...' 
                     placeholder='Lieu'
@@ -32,7 +37,8 @@ const RepaForm = ({ command, setCommand }) => {
                     recherche={true} 
                 />
             )}
-
+            
+            <Button onPress={precedForm} text='Précédent' arrow={false} bottom={true} />
             <Button onPress={suiteForm} text='Suivant' arrow={false} bottom={true} />
         </>
     );
