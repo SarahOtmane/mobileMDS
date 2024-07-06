@@ -9,7 +9,7 @@ import Etape from './sections/Etape';
 import Header from './sections/Header';
 import Button from './sections/Button';
 
-const Accueil = () => {
+const Accueil = ({ navigation }) => {
     return (
         <ScrollView>
             <View style={[accueilStyle.reparation, Style.m_B20]}>
@@ -33,7 +33,10 @@ const Accueil = () => {
                     Pas besoin de nous suivre à l'autre bout du monde. Il vous suffit de suivre ce tuto . 
                 </Text>
 
-                <Button text="Obtenir un devis" arrow={true} bottom={false} />
+                <Button 
+                    text="Obtenir un devis" arrow={true} bottom={false} 
+                    onPress={() => navigation.navigate('Reparer')}
+                />
             </View>
         </ScrollView>
     );
