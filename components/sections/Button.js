@@ -9,10 +9,15 @@ const Button = ({ text, arrow, bottom, onPress }) => {
 
     return (
         <TouchableOpacity
-            style={[styles.button, bottom ? styles.bottomPosition : null]}
+            style={[styles.button, 
+                bottom ? styles.bottomPosition : null,
+                text==='Précédent' ? styles.precedentPosition : null
+            ]}
             onPress={handleSubmit}
         >
-            <Text style={styles.buttonText}>{text}</Text>
+            <Text style={[styles.buttonText,
+                text==='Précédent' ? styles.precedentPositionText : null
+            ]}>{text}</Text>
             {arrow && (
                 <Svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <Path
@@ -55,6 +60,14 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 500,
     },
+    precedentPosition: {
+        position: 'absolute',
+        top: 430,
+        backgroundColor: '#fff',
+    },
+    precedentPositionText: {
+        color: '#000'
+    }
 });
 
 export default Button;
