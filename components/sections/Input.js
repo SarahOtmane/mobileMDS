@@ -1,28 +1,38 @@
+import React from 'react';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 
+import Style from '../../Style';
 
+export default Input = ({ label, placeholder, command, setCommand }) => {
+    const valueLabel = command[label.toLowerCase()] || '';
 
-export default Input = ({label, placeholder, command, setCommand }) =>{
-    let valueLabel;
-    if(label === 'specialite'){
-        valueLabel = command.specialite;
-    }
-
-    const handleInputChange = (name, value) => {
+    const handleInputChange = (value) => {
         setCommand({
           ...command,
-          [name]: value,
+          [label.toLowerCase()]: value, 
         });
-      };
+    };
 
-    return(
+    return (
         <View>
-            <Text>{label}</Text>
+            <Text style={[Style.m_T20, Style.m_B20, Style.textBold]}>{label}</Text>
             <TextInput
-              value={valueLabel}
-              onChangeText={(value) => handleInputChange(valueLabel, value)}
-              placeholder={placeholder}
-              keyboardType="text"
+                value={valueLabel}
+                onChangeText={handleInputChange}
+                placeholder={placeholder}
+                keyboardType="default"
+                style={styles.input}
             />
-      </View>
-    )
-}
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    input: {
+        height: 40,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        borderRadius: 5,
+        paddingHorizontal: 10,
+    },
+});
