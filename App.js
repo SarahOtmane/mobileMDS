@@ -9,6 +9,7 @@ import Accueil from './components/Accueil';
 import Compte from './components/Compte';
 import Reparer from './components/Reparer';
 import Connexion from './components/screen/user/Connexion'; 
+import Inscription from './components/screen/user/Inscription';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -60,6 +61,7 @@ export default function App() {
                 <Stack.Navigator>
                     <Stack.Screen name="Home" component={TabNavigator} options={{ headerShown: false }} />
                     <Stack.Screen name="Connexion" component={Connexion} options={{ headerShown: false }} />
+                    <Stack.Screen name="Inscription" component={Inscription} options={{ headerShown: false }} />
                 </Stack.Navigator>
             </NavigationContainer>
         </CommandProvider>
