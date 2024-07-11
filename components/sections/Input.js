@@ -16,7 +16,7 @@ export default Input = ({ label, placeholder, command, setCommand, recherche, er
 
     return (
         <View>
-            <Text style={[Style.m_T20, Style.m_B20, Style.textBold]}>{label}</Text>
+            <Text style={[Style.m_T20, Style.m_B10, Style.textBold]}>{label}</Text>
             <TextInput
                 value={valueLabel}
                 onChangeText={handleInputChange}
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         paddingHorizontal: 20,
         paddingVertical: 25,
-        marginRight : 20
+        marginRight : 20,
+        marginBottom: 20
     },
     recherche:{
         position: 'absolute',
