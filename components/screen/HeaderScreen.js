@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     },
     header: {
         marginTop: 90,
-        marginHorizontal: 20,
+        marginHorizontal: 30,
         position: 'relative'
     },
     titre: {
