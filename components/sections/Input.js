@@ -45,11 +45,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingVertical: 25,
         marginRight : 20,
-        marginBottom: 20
+        marginBottom: 20,
+        backgroundColor: '#fff'
     },
     recherche:{
         position: 'absolute',
-        top: 70,
+        top: 60,
         right: 40,
     },
     errorText: {
