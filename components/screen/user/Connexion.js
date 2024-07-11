@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Text, Image, ScrollView, View } from 'react-native';
+import { Text, Image, ScrollView, View} from 'react-native';
 import HeaderScreen from '../HeaderScreen';
+
+import compteStyle from '../../../styles/compteStyle';
+import Button from '../../sections/Button';
 
 export default Connexion = ({ navigation }) => {
     const [donnee, setDonnee] = useState({
@@ -13,7 +16,7 @@ export default Connexion = ({ navigation }) => {
         <ScrollView>
             <HeaderScreen titre='Se connecter' navigation={navigation} />
 
-            <View>
+            <View style={[compteStyle.seConnecter]}>
                 <Input 
                     label='Email'
                     placeholder='votre e-mail'
@@ -31,6 +34,16 @@ export default Connexion = ({ navigation }) => {
                     error={donnee.errors}
                 />
                 <Text>Mot de passe oublié ?</Text>
+            </View>
+
+            <View>
+                <Button 
+                    text='Se connecter' 
+                    arrow={true} 
+                    bottom={false} 
+                    onPress={() => navigation.navigate('Connexion')} 
+                    style=''
+                />
             </View>
         </ScrollView>
     );
