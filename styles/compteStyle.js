@@ -12,8 +12,8 @@ export default StyleSheet.create({
     },
 
     seConnecter: {
-        marginTop: 80,
+        marginTop: 50,
         paddingLeft: 30,
         paddingRight: 10
-    }
+    },
 })
