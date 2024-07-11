@@ -49,5 +49,7 @@ export default StyleSheet.create({
     position_absolute: {
         position: 'absolute',
     },
-    
+    textCenter: {
+        textAlign: 'center',
+    }
 })
