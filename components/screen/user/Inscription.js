@@ -19,6 +19,30 @@ export default Inscription = ({ navigation }) => {
 
             <View style={[compteStyle.seConnecter]}>
                 <Input 
+                    label='Nom'
+                    placeholder='votre nom'
+                    command={donnee} 
+                    setCommand={setDonnee} 
+                    recherche={false} 
+                    error={donnee.errors}
+                />
+                <Input 
+                    label='Prénom'
+                    placeholder='votre prénom'
+                    command={donnee} 
+                    setCommand={setDonnee} 
+                    recherche={false} 
+                    error={donnee.errors}
+                />
+                <Input 
+                    label='Téléphone'
+                    placeholder='votre numéro de téléphone'
+                    command={donnee} 
+                    setCommand={setDonnee} 
+                    recherche={false} 
+                    error={donnee.errors}
+                />
+                <Input 
                     label='Email'
                     placeholder='votre e-mail'
                     command={donnee} 
@@ -34,6 +58,14 @@ export default Inscription = ({ navigation }) => {
                     recherche={false} 
                     error={donnee.errors}
                 />
+                <Input 
+                    label='Confirmez votre mot de passe'
+                    placeholder='votre mot de passe'
+                    command={donnee} 
+                    setCommand={setDonnee} 
+                    recherche={false} 
+                    error={donnee.errors}
+                />
                 <Text style={[Style.textCenter]} >Mot de passe oublié ?</Text>
             </View>
 
@@ -43,9 +75,9 @@ export default Inscription = ({ navigation }) => {
                     arrow={true} 
                     bottom={false} 
                     onPress={() => navigation.navigate('Connexion')} 
-                    classStyle='seConnecterButton'
+                    classStyle='sinscrirerButton'
                 />
-                <Text style={[Style.textCenter]} >Vous avez déjà un compte? S’inscrirer ?</Text>
+                <Text style={[Style.textCenter, Style.m_B20]} >Vous avez déjà un compte? Se connecter ?</Text>
             </View>
         </ScrollView>
     );
