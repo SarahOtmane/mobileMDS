@@ -1,8 +1,9 @@
 import React from 'react';
 import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
+import compteStyle from '../../styles/compteStyle';
 
-const Button = ({ text, arrow, bottom, onPress }) => {
+const Button = ({ text, arrow, bottom, onPress, classStyle }) => {
     const handleSubmit = () => {
         onPress();
     };
@@ -11,7 +12,8 @@ const Button = ({ text, arrow, bottom, onPress }) => {
         <TouchableOpacity
             style={[styles.button, 
                 bottom ? styles.bottomPosition : null,
-                text==='Précédent' ? styles.precedentPosition : null
+                text==='Précédent' ? styles.precedentPosition : null,
+                classStyle === '' ? null : styles[classStyle]
             ]}
             onPress={handleSubmit}
         >
@@ -67,6 +69,11 @@ const styles = StyleSheet.create({
     },
     precedentPositionText: {
         color: '#000'
+    },
+    seConnecterButton: {
+        marginTop: 260,
+        marginHorizontal: 30,
+        width: 330
     }
 });
 
