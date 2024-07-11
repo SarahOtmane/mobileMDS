@@ -4,6 +4,7 @@ import HeaderScreen from '../HeaderScreen';
 
 import compteStyle from '../../../styles/compteStyle';
 import Button from '../../sections/Button';
+import Style from '../../../Style';
 
 export default Connexion = ({ navigation }) => {
     const [donnee, setDonnee] = useState({
@@ -33,7 +34,7 @@ export default Connexion = ({ navigation }) => {
                     recherche={false} 
                     error={donnee.errors}
                 />
-                <Text>Mot de passe oublié ?</Text>
+                <Text style={[Style.textCenter]} >Mot de passe oublié ?</Text>
             </View>
 
             <View>
@@ -42,8 +43,9 @@ export default Connexion = ({ navigation }) => {
                     arrow={true} 
                     bottom={false} 
                     onPress={() => navigation.navigate('Connexion')} 
-                    style=''
+                    classStyle='seConnecterButton'
                 />
+                <Text style={[Style.textCenter]} >Vous avez déjà un compte? S’inscrirer ?</Text>
             </View>
         </ScrollView>
     );
