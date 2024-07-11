@@ -9,5 +9,11 @@ export default StyleSheet.create({
 
     image: {
         marginLeft: 70
+    },
+
+    seConnecter: {
+        marginTop: 80,
+        paddingLeft: 30,
+        paddingRight: 10
     }
 })
