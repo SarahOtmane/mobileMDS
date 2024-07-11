@@ -45,5 +45,9 @@ export default StyleSheet.create({
     },
     textBold:{
         fontWeight: 'bold',
-    }
+    },
+    position_absolute: {
+        position: 'absolute',
+    },
+    
 })
