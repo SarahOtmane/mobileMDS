@@ -77,7 +77,7 @@ export default Inscription = ({ navigation }) => {
                     onPress={() => navigation.navigate('Connexion')} 
                     classStyle='sinscrirerButton'
                 />
-                <Text style={[Style.textCenter, Style.m_B20]} >Vous avez déjà un compte? Se connecter ?</Text>
+                <Text style={[Style.textCenter, Style.m_B20]} >Vous avez déjà un compte? <Text onPress={() => navigation.navigate('Connexion')}>Se connecter ?</Text></Text>
             </View>
         </ScrollView>
     );
