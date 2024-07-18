@@ -45,7 +45,7 @@ export default Connexion = ({ navigation }) => {
                     onPress={() => navigation.navigate('Connexion')} 
                     classStyle='seConnecterButton'
                 />
-                <Text style={[Style.textCenter]} >Vous avez déjà un compte? <Text onPress={() => navigation.navigate('Inscription')}>S’inscrirer ?</Text></Text>
+                <Text style={[Style.textCenter]} >Vous n'avez pas de compte? <Text onPress={() => navigation.navigate('Inscription')}>S’inscrirer ?</Text></Text>
             </View>
         </ScrollView>
     );
